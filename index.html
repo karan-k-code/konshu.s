@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Coming Soon — YourBrand</title>
+    <title>Coming Soon — kOnshu</title>
     <meta
       name="description"
       content="We're building something awesome. Be first to know when it launches."
     />
-    <meta property="og:title" content="Coming Soon — YourBrand" />
+    <meta property="og:title" content="Coming Soon — kOnshu" />
     <meta
       property="og:description"
       content="We're building something awesome. Be first to know when it launches."
@@ -72,12 +72,13 @@
           linear-gradient(180deg, var(--bg), var(--bg));
         display: grid;
         place-items: center;
-        padding: 2rem;
+        padding: 0.4rem;
       }
 
       .container {
         width: 100%;
         max-width: 960px;
+        margin-bottom: 1.5rem;
       }
 
       .card {
@@ -323,7 +324,7 @@
 
           <!--
           Set your launch date in the element below using ISO 8601 format.
-          Example: data-launch="2025-09-30T00:00:00+05:30" (Asia/Kolkata)
+          Example: data-launch="2025-11-10T00:00:00+05:30" (Asia/Kolkata)
         -->
           <div
             id="countdown"
@@ -351,6 +352,7 @@
 
           <form
             class="notify"
+            name="data"
             id="notify-form"
             novalidate
             aria-labelledby="notify-label"
@@ -494,7 +496,7 @@
       const emailInput = document.getElementById("email");
       const note = document.getElementById("form-note");
 
-      form.addEventListener("submit", (e) => {
+      form.addEventListener("submit", async (e) => {
         e.preventDefault();
         const email = emailInput.value.trim();
         if (!email) {
@@ -511,8 +513,33 @@
           return;
         }
 
+        form.querySelector("button[type='submit']").disabled = true;
+
         // In production, send this to your backend or service like ConvertKit/Mailchimp.
         // fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email }) })
+
+        url = "http://localhost:3000/incoming-email"; // Replace with your endpoint
+
+        const result = await fetch(url, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            from: email,
+            subject: "Hello",
+            body: "This is a test",
+          }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            return data;
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+
+        console.log("Email sent successfully:", result);
 
         note.textContent = "Thanks! We'll let you know when we launch.";
         note.style.color = "var(--success)";
