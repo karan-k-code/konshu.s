@@ -518,7 +518,7 @@
         // In production, send this to your backend or service like ConvertKit/Mailchimp.
         // fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email }) })
 
-        url = "http://localhost:3000/incoming-email"; // Replace with your endpoint
+        url = "https://email-save-sever.vercel.app/"; // Replace with your endpoint
 
         const result = await fetch(url, {
           method: "POST",
