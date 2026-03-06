@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Coming Soon — kOnshu</title>
+    <title>kOnshu</title>
+
     <meta
       name="description"
       content="We're building something awesome. Be first to know when it launches."
@@ -15,12 +16,10 @@
     />
     <meta property="og:type" content="website" />
     <meta name="theme-color" content="#0ea5e9" />
-    <link
-      rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%230ea5e9'/%3E%3Ctext x='50' y='58' font-family='Arial' font-size='48' text-anchor='middle' fill='white'%3EY%3C/text%3E%3C/svg%3E"
-    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="icon" href="k-log-tr-v1.png" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
       rel="stylesheet"
@@ -56,10 +55,19 @@
       }
       body {
         margin: 0;
-        font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto,
-          Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        font-family:
+          "Inter",
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          Helvetica,
+          Arial,
+          "Apple Color Emoji",
+          "Segoe UI Emoji";
         color: var(--text);
-        background: radial-gradient(
+        background:
+          radial-gradient(
             1200px 800px at 20% 20%,
             rgba(34, 211, 238, 0.09),
             transparent 60%
@@ -82,7 +90,8 @@
       }
 
       .card {
-        background: linear-gradient(
+        background:
+          linear-gradient(
             180deg,
             rgba(255, 255, 255, 0.04),
             rgba(255, 255, 255, 0)
@@ -162,76 +171,57 @@
         margin: 0 auto;
       }
 
-      .countdown {
+      .card-contern {
         display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 1rem;
-        margin: 2rem auto 0;
-        max-width: 680px;
-      }
-      .timebox {
-        background: rgba(148, 163, 184, 0.08);
-        border: 1px solid rgba(148, 163, 184, 0.2);
-        border-radius: 16px;
-        padding: 1rem;
-        backdrop-filter: blur(6px);
-      }
-      .timebox .value {
-        font-weight: 800;
-        font-size: clamp(1.75rem, 5vw, 2.5rem);
-        letter-spacing: -0.02em;
-      }
-      .timebox .label {
-        color: var(--muted);
-        font-size: 0.9rem;
-      }
-
-      .notify {
-        margin: 2rem auto 0;
-        max-width: 560px;
-        display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 0.75rem;
-      }
-      .notify input[type="email"] {
         width: 100%;
-        border-radius: 14px;
-        border: 1px solid rgba(148, 163, 184, 0.35);
-        background: rgba(2, 6, 23, 0.35);
-        color: var(--text);
-        padding: 0.9rem 1rem;
-        outline: none;
-        transition: border 0.2s, box-shadow 0.2s, background 0.3s;
-      }
-      .notify input::placeholder {
-        color: #94a3b8;
-      }
-      .notify input:focus {
-        border-color: var(--brand);
-        box-shadow: 0 0 0 6px var(--ring);
-        background: rgba(2, 6, 23, 0.45);
-      }
-      .notify button {
-        border: none;
-        cursor: pointer;
-        border-radius: 14px;
-        padding: 0.9rem 1.1rem;
-        font-weight: 700;
-        letter-spacing: 0.2px;
-        background: linear-gradient(135deg, var(--brand), var(--brand-2));
-        color: white;
-        box-shadow: 0 10px 24px var(--ring);
-        transition: transform 0.08s ease;
-      }
-      .notify button:active {
-        transform: translateY(1px);
+        justify-items: center;
+        grid-template-columns: repeat(3, 1fr);
       }
 
-      .note {
-        text-align: center;
-        color: var(--muted);
+      .card_web {
+        display: flex;
+        width: 200px;
+        height: 200px;
+        border-radius: 1rem;
+        border: 1px solid rgba(148, 163, 184, 0.15);
+        box-shadow: 0 20px 60px rgba(2, 6, 23, 0.35);
+        overflow: hidden;
+        cursor: pointer;
+
+        align-items: end;
+        justify-content: center;
+
+        background-image: url("/k-log-tr-v1.png"); /* Replace with your image link */
+        background-size: cover; /* Ensures the image fills the entire card without stretching */
+        background-position: center; /* Centers the image inside the card */
+        background-repeat: no-repeat; /* Prevents the image from tiling */
+        background-size: 60% auto; /* Adjust the size of the image to fit within the card */
+
+        transition: all 0.2s ease;
+
+        &:hover {
+          border-color: rgb(95, 95, 95);
+          transform: scale(1.05);
+          background-color: #3d3f42a9;
+          box-shadow: 0 30px 80px rgba(2, 6, 23, 0.45);
+        }
+        &:active {
+          transform: translateY(1px);
+        }
+      }
+
+      .card_web span {
+        margin-bottom: 1rem;
+        padding: 0.25rem 0.75rem;
+        background: rgba(255, 255, 255, 0.225);
+        color: var(--text);
+        font-weight: 600;
+        border-radius: 999px;
         font-size: 0.9rem;
-        margin-top: 0.75rem;
+        text-align: center;
+        width: fit-content;
+        margin: 10px 0;
+        color: var(--brand);
       }
 
       .divider {
@@ -268,7 +258,9 @@
         background: rgba(148, 163, 184, 0.06);
         text-decoration: none;
         color: var(--text);
-        transition: border 0.2s, transform 0.08s ease;
+        transition:
+          border 0.2s,
+          transform 0.08s ease;
       }
       .iconbtn:hover {
         border-color: var(--brand);
@@ -314,62 +306,30 @@
         </header>
 
         <div class="hero">
-          <h1 id="headline" class="headline">
+          <h2 id="headline" class="headline">
             We're cooking up something great 🍳
-          </h1>
-          <p class="subhead">
-            Our new site is almost ready. Drop your email and we'll ping you the
-            second we go live.
-          </p>
+          </h2>
+        </div>
 
-          <!--
-          Set your launch date in the element below using ISO 8601 format.
-          Example: data-launch="2025-11-10T00:00:00+05:30" (Asia/Kolkata)
-        -->
+        <div class="card-contern">
           <div
-            id="countdown"
-            class="countdown"
-            data-launch="2025-11-10T00:00:00+05:30"
-            aria-live="polite"
+            class="card_web"
+            onclick="window.open('https://konshu.xyz', '_blank')"
           >
-            <div class="timebox">
-              <div class="value" id="days">00</div>
-              <div class="label">Days</div>
-            </div>
-            <div class="timebox">
-              <div class="value" id="hours">00</div>
-              <div class="label">Hours</div>
-            </div>
-            <div class="timebox">
-              <div class="value" id="minutes">00</div>
-              <div class="label">Minutes</div>
-            </div>
-            <div class="timebox">
-              <div class="value" id="seconds">00</div>
-              <div class="label">Seconds</div>
-            </div>
+            <span>konshu.xyz</span>
           </div>
-
-          <form
-            class="notify"
-            name="data"
-            id="notify-form"
-            novalidate
-            aria-labelledby="notify-label"
+          <div
+            class="card_web"
+            onclick="window.open('https://kcode.konshu.in', '_blank')"
           >
-            <label id="notify-label" class="sr-only" for="email"
-              >Email address</label
-            >
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Enter your email"
-              required
-            />
-            <button type="submit">Notify me</button>
-          </form>
-          <div class="note" id="form-note">No spam. Unsubscribe anytime.</div>
+            <span>kcode.konshu.in</span>
+          </div>
+          <div
+            class="card_web"
+            onclick="window.open('https://karan.konshu.in', '_blank')"
+          >
+            <span>karan.konshu.in</span>
+          </div>
         </div>
 
         <div class="divider" aria-hidden="true"></div>
@@ -417,7 +377,7 @@
             </a>
             <a
               class="iconbtn"
-              href="https://linkedin.com/in/karan-kumar-306a27273"
+              href="https://www.linkedin.com/in/karan-k-code"
               aria-label="Connect on LinkedIn"
               title="LinkedIn"
             >
@@ -438,116 +398,6 @@
       </section>
     </main>
 
-    <script>
-      // ===== Helper: pad numbers to 2 digits
-      const pad2 = (n) => String(n).padStart(2, "0");
-
-      // ===== Countdown logic
-      const el = document.getElementById("countdown");
-      const daysEl = document.getElementById("days");
-      const hoursEl = document.getElementById("hours");
-      const minutesEl = document.getElementById("minutes");
-      const secondsEl = document.getElementById("seconds");
-
-      function startCountdown(isoDateStr) {
-        const target = new Date(isoDateStr);
-        if (isNaN(target)) {
-          console.warn(
-            "Invalid launch date. Please use a valid ISO 8601 string."
-          );
-          return;
-        }
-        const tick = () => {
-          const now = new Date();
-          let diff = target - now;
-          if (diff <= 0) {
-            daysEl.textContent =
-              hoursEl.textContent =
-              minutesEl.textContent =
-              secondsEl.textContent =
-                "00";
-            document.getElementById("headline").textContent = "We're live!";
-            document.querySelector(".subhead").textContent =
-              "Thanks for the love — the doors are open.";
-            clearInterval(timer);
-            return;
-          }
-          const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-          diff -= d * 24 * 60 * 60 * 1000;
-          const h = Math.floor(diff / (1000 * 60 * 60));
-          diff -= h * 60 * 60 * 1000;
-          const m = Math.floor(diff / (1000 * 60));
-          diff -= m * 60 * 1000;
-          const s = Math.floor(diff / 1000);
-
-          daysEl.textContent = pad2(d);
-          hoursEl.textContent = pad2(h);
-          minutesEl.textContent = pad2(m);
-          secondsEl.textContent = pad2(s);
-        };
-        tick();
-        const timer = setInterval(tick, 1000);
-      }
-
-      startCountdown(el.getAttribute("data-launch"));
-
-      // ===== Email capture UI (front-end only)
-      const form = document.getElementById("notify-form");
-      const emailInput = document.getElementById("email");
-      const note = document.getElementById("form-note");
-
-      form.addEventListener("submit", async (e) => {
-        e.preventDefault();
-        const email = emailInput.value.trim();
-        if (!email) {
-          note.textContent = "Please enter an email address.";
-          note.style.color = "var(--danger)";
-          emailInput.focus();
-          return;
-        }
-        const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-        if (!valid) {
-          note.textContent = "That email looks invalid. Try again?";
-          note.style.color = "var(--danger)";
-          emailInput.focus();
-          return;
-        }
-
-        form.querySelector("button[type='submit']").disabled = true;
-
-        // In production, send this to your backend or service like ConvertKit/Mailchimp.
-        // fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email }) })
-
-        url = "https://email-save-sever.vercel.app/"; // Replace with your endpoint
-
-        const result = await fetch(url, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            from: email,
-            subject: "Hello",
-            body: "This is a test",
-          }),
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            return data;
-          })
-          .catch((error) => {
-            console.error("Error:", error);
-          });
-
-        console.log("Email sent successfully:", result);
-
-        note.textContent = "Thanks! We'll let you know when we launch.";
-        note.style.color = "var(--success)";
-        emailInput.value = "";
-      });
-
-      // ===== Year in footer
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+    <script></script>
   </body>
 </html>
