@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Terms of Service | kOnshu</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .policy-content {
+        padding: 2rem 1.5rem 4rem;
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: left;
+        line-height: 1.6;
+        color: var(--text);
+      }
+      .policy-content h2 {
+        margin-top: 2rem;
+        color: var(--brand);
+      }
+      .policy-content p {
+        margin-bottom: 1rem;
+        color: var(--muted);
+      }
+      .back-link {
+        display: inline-block;
+        margin-bottom: 2rem;
+        color: var(--brand);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .back-link:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <section class="card">
+        <div class="glow" aria-hidden="true"></div>
+
+        <header>
+          <div class="logo" aria-label="YourBrand">
+            <div class="logo-badge">
+              <img src="./k-log-tr-v1.png" alt="kOnshu Logo" />
+            </div>
+            <span>kOnshu</span>
+          </div>
+          <div class="pill">Beta</div>
+        </header>
+
+        <div class="policy-content">
+          <a href="index.html" class="back-link">← Back to Home</a>
+          <h1>Terms of Service</h1>
+          <p>Last updated: March 15, 2026</p>
+
+          <p>By accessing kOnshu.in, you agree to be bound by these Terms of Service. If you do not agree, please do not use our website.</p>
+
+          <h2>1. Use of Website</h2>
+          <p>kOnshu provides a platform to explore our web projects and technological innovations. You agree to use the site only for lawful purposes and in a manner that does not infringe on others' rights.</p>
+
+          <h2>2. Beta Status</h2>
+          <p>kOnshu is currently in Beta. We provide the service "as is" and "as available." We may modify or discontinue features at any time without prior notice.</p>
+
+          <h2>3. Intellectual Property</h2>
+          <p>All content on kOnshu.in—including text, logos, and project names—is the property of kOnshu/Karan and is protected by copyright laws. Unauthorized use of these materials is strictly prohibited.</p>
+
+          <h2>4. User Interactions</h2>
+          <p>You may visit our project links (e.g., konshu.xyz). Each individual project may have its own specific terms and conditions that apply to its unique functionality.</p>
+
+          <h2>5. Limitation of Liability</h2>
+          <p>To the maximum extent permitted by law, kOnshu shall not be liable for any indirect, incidental, or consequential damages arising from your use of this website.</p>
+
+          <h2>6. Changes to Terms</h2>
+          <p>We reserve the right to update these Terms of Service at any time. Changes will be posted on this page with an updated "Last updated" date.</p>
+
+          <h2>7. Governing Law</h2>
+          <p>These terms are governed by the laws of our operating jurisdiction without regard to its conflict of law principles.</p>
+        </div>
+
+        <div class="divider" aria-hidden="true"></div>
+
+        <footer>
+          <div class="footer-left">
+            <small>© <span id="year"></span> kOnshu.in. All rights reserved.</small>
+          </div>
+        </footer>
+      </section>
+    </main>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

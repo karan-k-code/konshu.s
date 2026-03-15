@@ -3,23 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>kOnshu | Innovative Web Projects & Technology 🍳</title>
+    <title>kOnshu | Innovative Web Projects & Modern Tech Solutions 🍳</title>
 
     <meta
       name="description"
-      content="Explore kOnshu, a hub for innovative web projects and technology. We are building something awesome—stay tuned for our upcoming platform launches and updates."
+      content="Discover kOnshu: A curated hub for innovative web projects, including konshu.xyz, kcode, and plant.konshu.in. Explore our latest Beta releases and tech experiments."
     />
-    <meta name="keywords" content="kOnshu, kcode, web development, technology, innovative projects, Karan" />
+    <meta
+      name="keywords"
+      content="kOnshu, kcode, konshu.xyz, plant.konshu.in, web development, software engineering, tech innovations, Karan, innovative projects"
+    />
     <meta name="author" content="Karan" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="googlebot" content="index, follow" />
     <link rel="canonical" href="https://konshu.in" />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="kOnshu | Innovative Web Projects" />
+    <meta property="og:title" content="kOnshu | Innovative Web Projects & Tech Solutions" />
     <meta
       property="og:description"
-      content="Explore kOnshu, a hub for innovative web projects and technology. Stay tuned for our upcoming platform launches."
+      content="Explore kOnshu's ecosystem of web projects. From tech tutorials at kcode to creative platforms at konshu.xyz."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://konshu.in" />
@@ -30,8 +33,11 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@karan_k_code" />
     <meta name="twitter:creator" content="@karan_k_code" />
-    <meta name="twitter:title" content="kOnshu | Innovative Web Projects" />
-    <meta name="twitter:description" content="Explore kOnshu, a hub for innovative web projects and technology. Stay tuned for our upcoming platform launches." />
+    <meta name="twitter:title" content="kOnshu | Web Projects & Tech" />
+    <meta
+      name="twitter:description"
+      content="Curated hub for innovative web projects and modern tech solutions. Beta in progress."
+    />
     <meta name="twitter:image" content="https://konshu.in/k-log-tr-v1.png" />
 
     <meta name="theme-color" content="#0ea5e9" />
@@ -49,12 +55,17 @@
         "name": "kOnshu",
         "url": "https://konshu.in",
         "logo": "https://konshu.in/k-log-tr-v1.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "technical support",
+          "url": "https://x.com/karan_k_code"
+        },
         "sameAs": [
           "https://x.com/karan_k_code",
           "https://instagram.com/karan_k_code",
           "https://www.linkedin.com/in/karan-k-code"
         ],
-        "description": "A hub for innovative web projects and technology development."
+        "description": "A hub for innovative web projects and technology development including kcode and konshu.xyz."
       }
     </script>
     <script type="application/ld+json">
@@ -63,284 +74,30 @@
         "@type": "WebSite",
         "name": "kOnshu",
         "url": "https://konshu.in",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://konshu.in/?s={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
+        "hasPart": [
+          {
+            "@type": "WebPage",
+            "name": "konshu.xyz",
+            "url": "https://konshu.xyz"
+          },
+          {
+            "@type": "WebPage",
+            "name": "kcode",
+            "url": "https://kcode.konshu.in"
+          },
+          {
+            "@type": "WebPage",
+            "name": "plant.konshu.in",
+            "url": "https://plant.konshu.in"
+          }
+        ]
       }
     </script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
       rel="stylesheet"
     />
-    <style>
-      :root {
-        --bg: #0b1220; /* page background */
-        --card: #0f172a; /* card background */
-        --text: #e5e7eb; /* base text */
-        --muted: #94a3b8; /* secondary text */
-        --brand: #0ea5e9; /* accent color */
-        --brand-2: #22d3ee; /* accent gradient second color */
-        --ring: rgba(14, 165, 233, 0.35);
-        --success: #22c55e;
-        --danger: #ef4444;
-      }
-      @media (prefers-color-scheme: light) {
-        :root {
-          --bg: #f8fafc;
-          --card: #ffffff;
-          --text: #0f172a;
-          --muted: #475569;
-          --ring: rgba(14, 165, 233, 0.25);
-        }
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-      html,
-      body {
-        height: 100%;
-      }
-      body {
-        margin: 0;
-        font-family:
-          "Inter",
-          system-ui,
-          -apple-system,
-          Segoe UI,
-          Roboto,
-          Helvetica,
-          Arial,
-          "Apple Color Emoji",
-          "Segoe UI Emoji";
-        color: var(--text);
-        background:
-          radial-gradient(
-            1200px 800px at 20% 20%,
-            rgba(34, 211, 238, 0.09),
-            transparent 60%
-          ),
-          radial-gradient(
-            1200px 800px at 80% 30%,
-            rgba(14, 165, 233, 0.1),
-            transparent 60%
-          ),
-          linear-gradient(180deg, var(--bg), var(--bg));
-        display: grid;
-        place-items: center;
-        padding: 0.4rem;
-      }
-
-      .container {
-        width: 100%;
-        max-width: 960px;
-        margin-bottom: 1.5rem;
-      }
-
-      .card {
-        background:
-          linear-gradient(
-            180deg,
-            rgba(255, 255, 255, 0.04),
-            rgba(255, 255, 255, 0)
-          ),
-          var(--card);
-        border: 1px solid rgba(148, 163, 184, 0.15);
-        border-radius: 24px;
-        box-shadow: 0 20px 60px rgba(2, 6, 23, 0.35);
-        overflow: hidden;
-        position: relative;
-        isolation: isolate;
-      }
-
-      .glow {
-        position: absolute;
-        inset: -1px;
-        background: conic-gradient(
-          from 0deg at 50% 50%,
-          var(--brand),
-          var(--brand-2),
-          transparent 60%
-        );
-        filter: blur(40px);
-        opacity: 0.15;
-        z-index: -1;
-      }
-
-      header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-        padding: 1.25rem 1.25rem 0.75rem;
-      }
-
-      .logo {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.75rem;
-        font-weight: 800;
-        letter-spacing: 0.4px;
-        text-transform: uppercase;
-      }
-      .logo-badge {
-        width: 36px;
-        height: 36px;
-        display: grid;
-        place-items: center;
-      }
-      .logo-badge > img {
-        width: 36px;
-        height: 36px;
-        object-fit: cover;
-      }
-
-      .pill {
-        font-size: 0.85rem;
-        color: var(--muted);
-        border: 1px solid rgba(148, 163, 184, 0.25);
-        padding: 0.35rem 0.6rem;
-        border-radius: 999px;
-      }
-
-      .hero {
-        padding: 3.25rem 1.5rem 2rem;
-        text-align: center;
-      }
-      .headline {
-        font-size: clamp(2.2rem, 6vw, 3.4rem);
-        line-height: 1.05;
-        letter-spacing: -0.02em;
-        margin: 0 0 1rem;
-      }
-      .subhead {
-        color: var(--muted);
-        max-width: 680px;
-        margin: 0 auto;
-      }
-
-      .card-contern {
-        display: grid;
-        width: 100%;
-        justify-items: center;
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .card_web {
-        display: flex;
-        width: 200px;
-        height: 200px;
-        border-radius: 1rem;
-        border: 1px solid rgba(148, 163, 184, 0.15);
-        box-shadow: 0 20px 60px rgba(2, 6, 23, 0.35);
-        overflow: hidden;
-        cursor: pointer;
-
-        align-items: end;
-        justify-content: center;
-
-        background-image: url("/k-log-tr-v1.png"); /* Replace with your image link */
-        background-size: cover; /* Ensures the image fills the entire card without stretching */
-        background-position: center; /* Centers the image inside the card */
-        background-repeat: no-repeat; /* Prevents the image from tiling */
-        background-size: 60% auto; /* Adjust the size of the image to fit within the card */
-
-        transition: all 0.2s ease;
-
-        &:hover {
-          border-color: rgb(95, 95, 95);
-          transform: scale(1.05);
-          background-color: #3d3f42a9;
-          box-shadow: 0 30px 80px rgba(2, 6, 23, 0.45);
-        }
-        &:active {
-          transform: translateY(1px);
-        }
-      }
-
-      .card_web span {
-        margin-bottom: 1rem;
-        padding: 0.25rem 0.75rem;
-        background: rgba(255, 255, 255, 0.225);
-        color: var(--text);
-        font-weight: 600;
-        border-radius: 999px;
-        font-size: 0.9rem;
-        text-align: center;
-        width: fit-content;
-        margin: 10px 0;
-        color: var(--brand);
-      }
-
-      .divider {
-        height: 1px;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          rgba(148, 163, 184, 0.28),
-          transparent
-        );
-        margin: 2rem 1.25rem 0;
-      }
-
-      footer {
-        padding: 1.25rem;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-      }
-
-      .socials {
-        display: flex;
-        gap: 0.5rem;
-      }
-      .iconbtn {
-        width: 40px;
-        height: 40px;
-        border-radius: 10px;
-        display: grid;
-        place-items: center;
-        border: 1px solid rgba(148, 163, 184, 0.3);
-        background: rgba(148, 163, 184, 0.06);
-        text-decoration: none;
-        color: var(--text);
-        transition:
-          border 0.2s,
-          transform 0.08s ease;
-      }
-      .iconbtn:hover {
-        border-color: var(--brand);
-      }
-      .iconbtn:active {
-        transform: translateY(1px);
-      }
-
-      .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border-width: 0;
-      }
-
-      @media (max-width: 520px) {
-        .notify {
-          grid-template-columns: 1fr;
-        }
-        footer {
-          justify-content: center;
-          text-align: center;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main class="container">
@@ -363,33 +120,47 @@
           </h1>
         </div>
 
-        <div class="card-contern">
+        <div class="card-content">
           <div
             class="card_web"
             onclick="window.open('https://konshu.xyz', '_blank')"
           >
+            <img src="konshu.xyz.png" alt="kOnshu.xyz Logo" />
             <span>konshu.xyz</span>
           </div>
           <div
             class="card_web"
             onclick="window.open('https://kcode.konshu.in', '_blank')"
           >
+            <img src="kcode.konshu.in.png" alt="kcode.konshu.in Logo" />
             <span>kcode.konshu.in</span>
           </div>
           <div
             class="card_web"
             onclick="window.open('https://karan.konshu.in', '_blank')"
           >
+            <img src="karan.konshu.in.png" alt="karan.konshu.in Logo" />
             <span>karan.konshu.in</span>
+          </div>
+          <div
+            class="card_web"
+            onclick="window.open('https://plant.konshu.in', '_blank')"
+          >
+            <img src="plant.konshu.in.png" alt="plant.konshu.in Logo" />
+            <span>plant.konshu.in</span>
           </div>
         </div>
 
         <div class="divider" aria-hidden="true"></div>
 
         <footer>
-          <small
-            >© <span id="year"></span> kOnshu.in. All rights reserved.</small
-          >
+          <div class="footer-left">
+            <small>© <span id="year"></span> kOnshu.in. All rights reserved.</small>
+            <nav class="legal-nav" aria-label="Legal links">
+              <a href="privacy.html">Privacy Policy</a>
+              <a href="terms.html">Terms of Service</a>
+            </nav>
+          </div>
           <nav class="socials" aria-label="Social links">
             <a
               class="iconbtn"
@@ -450,6 +221,8 @@
       </section>
     </main>
 
-    <script></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
