@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>plant.konshu.in | Premium Houseplants & Botanical Care Store | kOnshu 🍳</title>
+
+    <meta
+      name="description"
+      content="Detailed guide, features, and setup instructions for plant.konshu.in, an online botanical nursery and garden shop offering Monsteras, Fiddle Leaf Figs, 30-day health guarantee, and lifetime care support."
+    />
+    <meta name="keywords" content="plant.konshu.in, buy plants online, indoor houseplants, Monstera, Fiddle Leaf Fig, organic gardening, 30-day plant guarantee, botanist care support, kOnshu" />
+    <meta name="author" content="Karan" />
+    <meta name="theme-color" content="#fb923c" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://konshu.in/plant.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="plant.konshu.in | Premium Houseplants & Care Shop" />
+    <meta
+      property="og:description"
+      content="Shop beautiful, healthy indoor plants with safe, eco-friendly delivery. Benefit from our 30-day health guarantee and lifetime access to expert botanists at plant.konshu.in."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://konshu.in/plant.html" />
+    <meta property="og:image" content="https://konshu.in/plant.konshu.in.webp" />
+    <meta property="og:site_name" content="kOnshu" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@karan_k_code" />
+    <meta name="twitter:creator" content="@karan_k_code" />
+    <meta name="twitter:title" content="plant.konshu.in | Premium Indoor Plants & Botanist Support" />
+    <meta
+      name="twitter:description"
+      content="Get a healthy plant guarantee and lifetime botanist diagnoses. Safe organic shipping."
+    />
+    <meta name="twitter:image" content="https://konshu.in/plant.konshu.in.webp" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "plant.konshu.in E-Commerce Documentation",
+        "url": "https://konshu.in/plant.html",
+        "description": "Ecosystem overview detailing shopping cart features, Stripe API integration, botanical filtering catalog, and care assistance parameters for plant.konshu.in.",
+        "applicationCategory": "ECommerceApplication, EducationalApplication",
+        "operatingSystem": "All web-enabled devices",
+        "author": {
+          "@type": "Person",
+          "name": "Karan"
+        }
+      }
+    </script>
+
+    <link rel="icon" href="k_logo.webp" type="image/x-icon" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      .details-container {
+        max-width: 900px;
+        margin: 4rem auto 6rem auto;
+      }
+
+      .back-btn-row {
+        margin-bottom: 2rem;
+      }
+
+      .detail-header {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .detail-badge-row {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+      }
+
+      .project-badge {
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        padding: 0.3rem 0.8rem;
+        border-radius: 6px;
+        background: rgba(251, 146, 60, 0.08);
+        color: var(--orange);
+        border: 1px solid rgba(251, 146, 60, 0.2);
+      }
+
+      .status-pill {
+        font-size: 0.75rem;
+        font-weight: 600;
+        padding: 0.3rem 0.8rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--card-border);
+        color: var(--text-secondary);
+      }
+
+      .detail-title {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        line-height: 1.15;
+      }
+
+      .action-bar {
+        display: flex;
+        gap: 1rem;
+        margin-top: 0.5rem;
+      }
+
+      /* Mockup preview image */
+      .preview-container {
+        margin: 2.5rem 0;
+        position: relative;
+      }
+
+      .preview-glow {
+        position: absolute;
+        inset: -20px;
+        border-radius: 24px;
+        filter: blur(40px);
+        opacity: 0.15;
+        z-index: -1;
+        pointer-events: none;
+        background: radial-gradient(circle, var(--orange) 0%, transparent 70%);
+      }
+
+      /* Rich section blocks */
+      .info-section {
+        margin-bottom: 3.5rem;
+      }
+
+      .info-section h2 {
+        font-size: 1.35rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin-bottom: 1.25rem;
+        color: var(--text-primary);
+        display: flex;
+        align-items: center;
+        gap: 0.65rem;
+        border-bottom: 1px solid var(--card-border);
+        padding-bottom: 0.75rem;
+      }
+
+      .info-section h2 svg {
+        color: var(--orange);
+      }
+
+      .section-description {
+        font-size: 1.05rem;
+        color: var(--text-secondary);
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+      }
+
+      /* What it does: Grid */
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1rem;
+      }
+
+      .feature-card {
+        background: var(--card);
+        border: 1px solid var(--card-border);
+        border-radius: 16px;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        transition: all var(--transition-fast);
+      }
+
+      .feature-card:hover {
+        border-color: rgba(255, 255, 255, 0.12);
+        transform: translateY(-2px);
+      }
+
+      .feature-icon-wrapper {
+        width: 38px;
+        height: 38px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(251, 146, 60, 0.08);
+        color: var(--orange);
+      }
+
+      .feature-title {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--text-primary);
+      }
+
+      .feature-desc {
+        font-size: 0.88rem;
+        color: var(--text-secondary);
+        line-height: 1.5;
+      }
+
+      /* How to use: Steps */
+      .steps-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+
+      .step-item {
+        background: var(--card);
+        border: 1px solid var(--card-border);
+        border-radius: 16px;
+        padding: 1.25rem 1.5rem;
+        display: flex;
+        gap: 1.25rem;
+        align-items: flex-start;
+      }
+
+      .step-number {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+        font-weight: 700;
+        flex-shrink: 0;
+        background: rgba(251, 146, 60, 0.1);
+        color: var(--orange);
+        border: 1px solid rgba(251, 146, 60, 0.2);
+      }
+
+      .step-text {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+      }
+
+      .step-heading {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--text-primary);
+      }
+
+      .step-instruction {
+        font-size: 0.88rem;
+        color: var(--text-secondary);
+        line-height: 1.55;
+      }
+
+      .step-hindi-translation {
+        font-size: 0.82rem;
+        color: var(--text-muted);
+        line-height: 1.5;
+        font-style: italic;
+      }
+
+      /* Tech tags */
+      .details-tech-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin-top: 0.5rem;
+      }
+
+      .details-tech-tag {
+        font-size: 0.8rem;
+        font-weight: 600;
+        padding: 0.35rem 0.75rem;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--card-border);
+        color: var(--text-secondary);
+        transition: all var(--transition-fast);
+      }
+
+      .details-tech-tag:hover {
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--text-primary);
+        border-color: rgba(255, 255, 255, 0.12);
+      }
+
+      @media (max-width: 640px) {
+        .action-bar {
+          flex-direction: column;
+        }
+        .action-bar .btn {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Background Animated Auras -->
+    <div class="aura aura-1" aria-hidden="true"></div>
+    <div class="aura aura-2" aria-hidden="true"></div>
+
+    <!-- Floating Navbar -->
+    <header class="nav-header">
+      <div class="container nav-container">
+        <a href="index.html" class="logo" aria-label="kOnshu Home">
+          <div class="logo-badge">
+            <img src="./logo.svg" alt="kOnshu Logo" />
+          </div>
+          <span>kOnshu</span>
+        </a>
+        <nav aria-label="Primary navigation">
+          <ul class="nav-menu">
+            <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+            <li><a href="index.html#roadmap" class="nav-link">Roadmap</a></li>
+            <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+            <li>
+              <a
+                href="https://x.com/karan_k_code"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="nav-link"
+                >Socials</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://karan.konshu.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="nav-btn"
+                >Portfolio</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="details-container">
+        <!-- Header -->
+        <div class="detail-header">
+          <div class="detail-badge-row">
+            <span class="project-badge">E-Commerce Boutique</span>
+            <span class="status-pill">Active Beta</span>
+          </div>
+          <h1 class="detail-title">
+            plant.konshu.in <br />
+            <span class="gradient-text" style="background: var(--orange-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Bespoke Botanist Shop & Care</span>
+          </h1>
+          <div class="action-bar">
+            <a href="https://plant.konshu.in" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: #ffffff; color: #09090b; border-color: #ffffff;">
+              Visit Live Site
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Screenshot Preview -->
+        <div class="preview-container">
+          <div class="preview-glow"></div>
+          <div class="browser-mockup">
+            <div class="browser-bar">
+              <div class="browser-dot dot-red"></div>
+              <div class="browser-dot dot-yellow"></div>
+              <div class="browser-dot dot-green"></div>
+              <div class="browser-address">https://plant.konshu.in</div>
+            </div>
+            <div class="browser-screen">
+              <img src="plant.konshu.in.webp" alt="plant.konshu.in interface preview" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Overview Section -->
+        <div class="info-section">
+          <h2>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            Overview / संक्षिप्त विवरण
+          </h2>
+          <p class="section-description">
+            plant.konshu.in is an online nursery and botanical shop prototype engineered to deliver healthy indoor foliage (Monsteras, Figs, Succulents) directly to users. The platform focuses on sustainable shipping methods and expert plant care support resources.
+          </p>
+          <p class="section-description" style="font-style: italic; color: var(--text-muted);">
+            plant.konshu.in एक प्रीमियम ई-कॉमर्स प्रोटोटाइप स्टोर है जो घर में रखे जाने वाले सजावटी पौधों और उनकी देखभाल की गाइड प्रदान करता है। इसमें स्ट्राइप पेमेंट गेटवे और लाइव कैटलॉग फ़िल्टरिंग की सुविधा है।
+          </p>
+        </div>
+
+        <!-- What it does Section -->
+        <div class="info-section">
+          <h2>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            What it Does / इससे क्या-क्या होता है?
+          </h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon-wrapper">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5v14M22 9v6M7 8v8M2 10v4"></path></svg>
+              </div>
+              <div class="feature-title">Guaranteed Healthy Plants</div>
+              <div class="feature-desc">Provides a 30-day "healthy plant guarantee" ensuring free replacement for any damaged flora upon receipt.</div>
+              <div class="step-hindi-translation">30 दिनों की "स्वस्थ पौधे की गारंटी" जिसके तहत पार्सल में पौधा खराब होने पर मुफ्त रिप्लेसमेंट मिलता है।</div>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon-wrapper">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+              </div>
+              <div class="feature-title">Lifetime Botanist Support</div>
+              <div class="feature-desc">Includes direct consultation access to expert botanists for disease diagnosis and custom plant care instructions.</div>
+              <div class="step-hindi-translation">पौधों की बीमारियों और देखभाल से जुड़ी समस्याओं के समाधान के लिए वनस्पति विशेषज्ञों से लाइव सपोर्ट।</div>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon-wrapper">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+              </div>
+              <div class="feature-title">Eco-friendly Secure Shipping</div>
+              <div class="feature-desc">Ensures secure transit using 100% recyclable organic insulation packaging. Free delivery on orders over ₹499.</div>
+              <div class="step-hindi-translation">100% रीसाइकिलेबल और जैविक पैकिंग सामग्री के साथ सुरक्षित डिलीवरी। ₹499 से ऊपर के ऑर्डर्स पर मुफ्त शिपिंग।</div>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon-wrapper">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+              </div>
+              <div class="feature-title">Shopping Cart & Stripe Checkout</div>
+              <div class="feature-desc">Allows users to filter products (pet-friendly, low-maintenance), manage shopping carts, and execute payments via Stripe SDK.</div>
+              <div class="step-hindi-translation">पालतू-अनुकूल पौधों की फ़िल्टरिंग, गतिशील कार्ट मैनेजमेंट और स्ट्राइप पेमेंट गेटवे का डेमो।</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- How to Use Section -->
+        <div class="info-section">
+          <h2>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+            How to Use / इसे कैसे इस्तेमाल करें?
+          </h2>
+          <div class="steps-list">
+            <div class="step-item">
+              <div class="step-number">1</div>
+              <div class="step-text">
+                <span class="step-heading">Filter & Select Plants</span>
+                <span class="step-instruction">Use the navigation catalog to sort plants by categories (e.g. Pet-Friendly, Low Maintenance). Click a card to read care instructions.</span>
+                <span class="step-hindi-translation">स्टोर के फिल्टर बार से पौधों को छांटें (जैसे पालतू-सुरक्षित, कम-देखभाल)। देखभाल संबंधी जानकारी पढ़ने के लिए कार्ड पर क्लिक करें।</span>
+              </div>
+            </div>
+
+            <div class="step-item">
+              <div class="step-number">2</div>
+              <div class="step-text">
+                <span class="step-heading">Configure Cart & Quantities</span>
+                <span class="step-instruction">Add selected plants to your shopping cart. You can review items, adjust quantites, and apply discount configurations.</span>
+                <span class="step-hindi-translation">पौधों को कार्ट में जोड़ें, जहाँ आप संख्या घटा या बढ़ा सकते हैं और कुल बिल देख सकते हैं।</span>
+              </div>
+            </div>
+
+            <div class="step-item">
+              <div class="step-number">3</div>
+              <div class="step-text">
+                <span class="step-heading">Initiate Sandbox Checkout</span>
+                <span class="step-instruction">Proceed to the checkout form, fill in mock shipping addresses, and enter Stripe testing credentials to simulate a live secure transaction.</span>
+                <span class="step-hindi-translation">चेकआउट पर क्लिक करके शिपिंग पता भरें और स्ट्राइप टेस्ट कार्ड नंबर डालकर डेमो पेमेंट पूरा करें।</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech Stack Section -->
+        <div class="info-section">
+          <h2>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            Tech Stack / प्रयुक्त तकनीक
+          </h2>
+          <div class="details-tech-tags">
+            <span class="details-tech-tag">React.js framework</span>
+            <span class="details-tech-tag">Stripe Elements Web SDK</span>
+            <span class="details-tech-tag">Node.js Express Server</span>
+            <span class="details-tech-tag">MongoDB Collections</span>
+            <span class="details-tech-tag">Mongoose Schemas</span>
+            <span class="details-tech-tag">REST endpoints</span>
+            <span class="details-tech-tag">TailwindCSS layouts</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="global-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="index.html" class="logo" aria-label="kOnshu Home">
+              <div class="logo-badge">
+                <img src="./logo.svg" alt="kOnshu Logo" />
+              </div>
+              <span>kOnshu</span>
+            </a>
+            <p>
+              Curated hub for innovative web projects, botanical shops,
+              technical design systems, and software engineering.
+            </p>
+          </div>
+          <div class="footer-links-group">
+            <span class="footer-links-title">Ecosystem</span>
+            <ul class="footer-links">
+              <li><a href="https://konshu.xyz" target="_blank" rel="noopener noreferrer">konshu.xyz</a></li>
+              <li><a href="https://kcode.konshu.in" target="_blank" rel="noopener noreferrer">kcode.konshu.in</a></li>
+              <li><a href="https://plant.konshu.in" target="_blank" rel="noopener noreferrer">plant.konshu.in</a></li>
+              <li><a href="https://tools-cli.konshu.in" target="_blank" rel="noopener noreferrer">tools-cli.konshu.in</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-group">
+            <span class="footer-links-title">Legal & Contact</span>
+            <ul class="footer-links">
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
+              <li><a href="https://x.com/karan_k_code" target="_blank" rel="noopener noreferrer">Follow on X</a></li>
+              <li><a href="https://www.linkedin.com/in/karan-k-code" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <small>© <span id="year"></span> kOnshu.in. All rights reserved.</small>
+          <div class="socials" aria-label="Social links">
+            <a class="iconbtn" href="https://x.com/karan_k_code" target="_blank" rel="noopener noreferrer" aria-label="Follow on X" title="X">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2H21l-6.56 7.497L22 22h-6.828l-5.34-6.83L3.6 22H1l7.02-8.02L2 2h6.91l4.82 6.273L18.244 2Zm-1.21 18h1.894L7.06 4H5.07l11.965 16Z"/>
+              </svg>
+            </a>
+            <a class="iconbtn" href="https://instagram.com/konshu.in" target="_blank" rel="noopener noreferrer" aria-label="Follow on Instagram" title="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5Zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7Zm11 2a1 1 0 110 2 1 1 0 010-2ZM12 7a5 5 0 110 10 5 5 0 010-10Zm0 2a3 3 0 100 6 3 3 0 000-6Z"/>
+              </svg>
+            </a>
+            <a class="iconbtn" href="https://www.linkedin.com/in/karan-k-code" target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn" title="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM0 8.98h4.99V24H0V8.98Zm7.49 0H12v2.06h.06c.63-1.2 2.17-2.46 4.47-2.46 4.78 0 5.67 3.15 5.67 7.25V24h-4.99v-6.77c0-1.61-.03-3.69-2.25-3.69-2.25 0-2.59 1.76-2.59 3.57V24H7.49V8.98Z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
