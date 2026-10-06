@@ -487,7 +487,7 @@ header:not(.nav-header) {
 
 .section-title {
   font-size: clamp(1.5rem, 3vw, 2.1rem);
-  font-weight: 800;
+  /* font-weight: 800; */
   letter-spacing: -0.03em;
 }
 
@@ -501,6 +501,7 @@ header:not(.nav-header) {
   margin: 0 -1.5rem;
 }
 
+/* TODO */
 .card-content {
   display: flex;
   overflow-x: auto;
@@ -573,12 +574,13 @@ header:not(.nav-header) {
   text-decoration: none;
   background: var(--card);
   border: 1px solid var(--card-border);
-  border-radius: 20px;
+  border-radius: 1.25rem;
   overflow: hidden;
   transition:
     transform var(--transition-normal),
     border-color var(--transition-normal),
     box-shadow var(--transition-normal);
+
   will-change: transform;
   position: relative;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
@@ -590,7 +592,7 @@ header:not(.nav-header) {
 /* Mouse cursor hover spotlight glow */
 .card_web::before {
   content: "";
-  position: absolute;
+  /* position: absolute; */
   inset: 0;
   background: radial-gradient(
     200px circle at var(--mouse-x, 0px) var(--mouse-y, 0px),
@@ -634,9 +636,9 @@ header:not(.nav-header) {
 
 .card_web img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
-  display: block;
+  display: flex;
   transition: transform var(--transition-normal);
   will-change: transform;
 }
@@ -1001,14 +1003,14 @@ header:not(.nav-header) {
 
 .browser-screen {
   position: relative;
-  aspect-ratio: 16/10;
+  /* aspect-ratio: 16/10; */
   background: var(--bg);
 }
 
 .browser-screen img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
   display: block;
 }
 
@@ -1577,7 +1579,7 @@ footer.global-footer {
 
 .faq-item[open] {
   border-color: rgba(var(--brand-rgb), 0.3);
-  box-shadow: 
+  box-shadow:
     0 10px 40px rgba(var(--brand-rgb), 0.08),
     0 0 0 1px rgba(var(--brand-rgb), 0.1);
 }
@@ -1618,7 +1620,9 @@ footer.global-footer {
   content: "";
   position: absolute;
   background-color: var(--text-secondary);
-  transition: transform var(--transition-normal), background-color var(--transition-normal);
+  transition:
+    transform var(--transition-normal),
+    background-color var(--transition-normal);
 }
 
 /* Horizontal line */
@@ -1712,15 +1716,14 @@ footer.global-footer {
   .faq-section {
     padding: 6rem 0 3rem;
   }
-  
+
   .faq-question {
     padding: 1.25rem 1.5rem;
     font-size: 1rem;
   }
-  
+
   .faq-answer {
     padding: 0 1.5rem 1.5rem;
     font-size: 0.95rem;
   }
 }
-

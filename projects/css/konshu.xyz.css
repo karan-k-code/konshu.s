@@ -45,7 +45,7 @@
 
 .detail-title {
   font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 800;
+  /* font-weight: 800; */
   letter-spacing: -0.04em;
   line-height: 1.15;
 }
