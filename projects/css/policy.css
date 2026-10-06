@@ -1,0 +1,61 @@
+/* Legal content styles */
+
+.policy-content {
+  padding: 2.5rem 2.5rem 5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.policy-content h1 {
+  font-size: 1.85rem;
+  /* font-weight: 800; */
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.03em;
+}
+
+.policy-content p.last-updated {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+}
+
+.policy-content h2 {
+  font-size: 1.2rem;
+  /* font-weight: 700; */
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--brand-2);
+}
+
+.policy-content p {
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  color: var(--brand);
+  text-decoration: none;
+  /* font-weight: 600; */
+  font-size: 0.9rem;
+  transition: transform var(--transition-fast);
+}
+
+.back-link:hover {
+  transform: translateX(-3px);
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
+}

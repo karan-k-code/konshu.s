@@ -4,7 +4,7 @@ Welcome to the central hub for **kOnshu**, a collection of innovative web projec
 
 ## 🚀 Explore Our Projects
 
-- **[konshu.xyz](https://konshu.xyz)** - Creative experiments and digital playgrounds.
+- **[konshu.xyz](https://konshu.in/projects/konshu-xyz.html)** - Creative experiments and digital playgrounds.
 - **[kcode.konshu.in](https://kcode.konshu.in)** - Tech tutorials, code snippets, and development resources.
 - **[karan.konshu.in](https://karan.konshu.in)** - Personal portfolio and professional showcase.
 - **[plant.konshu.in](https://plant.konshu.in)** - Specialized niche project (Beta).
